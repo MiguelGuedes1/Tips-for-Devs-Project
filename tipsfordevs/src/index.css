@@ -31,8 +31,7 @@ nav button {
   font-family: "poppins", sans-serif;
 }
 
-a:hover,
-nav button:hover {
+a:hover {
   color: #bbb;
 }
 

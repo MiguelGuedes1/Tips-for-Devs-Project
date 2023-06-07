@@ -5,12 +5,26 @@ import {                                              //  Essa seção importa d
     createUserWithEmailAndPassword,
     signWithEmailAndPassword,
     updateProfile,
-    signout
+    signOut
 } from "firebase/auth"
 
 import {useState,useEffect} from "react"
 
-export const UserAuthentication=()=>{                      // Aqui é definida uma função chamada userAuthentication que será exportada para ser utilizada em outros lugares do código.
+
+
+
+
+
+
+
+
+
+
+
+
+ // Aqui é definida uma função chamada userAuthentication que será exportada para ser utilizada em outros lugares do código.
+
+export const UserAuthentication=()=>{                     
     const [error,setError]=useState(null)
     const [loading,setLoading]=useState(null)     // O valor inicial de ambas é null. O hook useState é utilizado para criar essas variáveis de estado e suas respectivas funções para atualização.
 
@@ -26,6 +40,9 @@ export const UserAuthentication=()=>{                      // Aqui é definida u
         }
     }
 
+
+
+    // Registo
 
     const createUser=async(data)=>{
         checkIfIsCancelled()  // Verifica se a operação foi cancelada. Se `cancelled` for verdadeiro, a função retorna e interrompe a execução.
@@ -73,6 +90,15 @@ export const UserAuthentication=()=>{                      // Aqui é definida u
         setLoading(false)    // Define `loading` como false, indicando que a operação de criação do usuário foi concluída.
     }
 
+
+    //LogOut
+
+    const logout= () => {
+        checkIfIsCancelled()
+        signOut(auth)
+
+    }
+
     useEffect(()=>{
         return()=>setCancelled(true)
     },[])
@@ -81,7 +107,8 @@ export const UserAuthentication=()=>{                      // Aqui é definida u
             auth,
             createUser,
             error,
-            loading
+            loading,
+            logout
         }
 
 }

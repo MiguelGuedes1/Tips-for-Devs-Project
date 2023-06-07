@@ -10,3 +10,13 @@
     font-family: "poppins";
 
 }
+
+.icons {
+    display: flex;
+    gap: .7rem;
+    font-size: 2rem;
+}
+
+.icon {
+    font-size: 1.6rem;
+}

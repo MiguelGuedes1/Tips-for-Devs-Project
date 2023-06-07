@@ -21,6 +21,8 @@ import NavBar from './Components/NavBar';
 import Footer from './Components/Footer';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
+import CreatePost from './pages/CreatePost/CreatePost';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 function App() {
 
@@ -43,8 +45,11 @@ useEffect(()=>{
         <Routes>
           <Route path='/' element={<Home/>} ></Route>
           <Route path='/About' element={<About/>} ></Route>
-          <Route path='/Login' element={<Login/>} ></Route>
-          <Route path='/Register' element={<Register/>} ></Route>
+          <Route path='/Login' element={!user ? <Login/> : <Navigate to = "/" /> } ></Route>
+          <Route path='/Register' element={!user ? <Register/> : <Navigate to = "/" />} ></Route>
+          <Route path='/CreatePost' element={user ? <CreatePost/> : <Navigate to = "/Login" />} ></Route>
+          <Route path='Dashboard' element={user ? <Dashboard/> : <Navigate to = "/"/>} ></Route>
+
         </Routes>
         </div>
         <Footer/>

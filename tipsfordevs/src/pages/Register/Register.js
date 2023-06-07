@@ -49,8 +49,15 @@ if(authError){
 return (
     
     <div className={styles.register}>
-       <h1>Cadastre-se para postar</h1>
-       <p>Crie o seu utilizador e divulgue os seus conhecimentos</p>
+       <h1>Registo</h1>
+        <p>
+          {`if(brain!=empty){
+            keepCoding()
+          } else{
+            orderCoffe()
+          }`}
+        </p>
+
       
        <form onSubmit={handleSubmit}>
           <label>
@@ -73,7 +80,7 @@ return (
             <input type="password" name="confirmPassword" required placeholder="Confirme a sua password" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)} />
           </label>
 
-          <button className="btn">Cadastrar</button>
+          <button className="btn">Registar</button>
           {error && <p className="error">{error}</p>}
 
 
