@@ -11,7 +11,7 @@ const[password,setPassword]=useState("")
 const[confirmPassword,setConfirmPassword]=useState("")
 const[error,setError]=useState("")
 
-const{createUser, error:authError, loading}=UserAuthentication()
+const{createUser, error:authError, loading}=UserAuthentication()   // importaçao do hook useAuthentication
 
 const handleSubmit = async (e) => {        {/* usada para evitar o comportamento padrão do evento, que geralmente é recarregar a página quando um formulário é enviado. */}
   e.preventDefault()
@@ -46,15 +46,7 @@ if(authError){
 },[authError])
 
 
-
-
-
-
-
-
-
-
-  return (
+return (
     
     <div className={styles.register}>
        <h1>Cadastre-se para postar</h1>
@@ -91,3 +83,6 @@ if(authError){
 }
 
 export default Register
+
+
+

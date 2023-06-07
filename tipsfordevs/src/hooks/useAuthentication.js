@@ -28,22 +28,25 @@ export const UserAuthentication=()=>{                      // Aqui é definida u
 
 
     const createUser=async(data)=>{
-        checkIfIsCancelled()
+        checkIfIsCancelled()  // Verifica se a operação foi cancelada. Se `cancelled` for verdadeiro, a função retorna e interrompe a execução.
 
-        setLoading(true)
+        setLoading(true) // Define `loading` como true para indicar que a operação de criação do usuário está em andamento.
 
-        setError(null)
+        setError(null) // // Limpa o estado de erro, definindo-o como null, antes de executar a operação de criação do usuário.
+
 
         try {
             const{user}= await createUserWithEmailAndPassword(
                 auth,
                 data.email,
                 data.password
-            )
+            )     // Cria um novo usuário com o email e a senha fornecidos em `data`. O objeto `user` é extraído da resposta.
+
 
             updateProfile(user,{
                 displayName:data.displayName
-            })
+            })   // Atualiza o perfil do usuário recém-criado, definindo o `displayName` com o valor fornecido em `data`.
+
 
             return user
        
@@ -64,10 +67,10 @@ export const UserAuthentication=()=>{                      // Aqui é definida u
                 systemErrorMessage="Ocorreu um erro, por favor tente mais tarde"
             }
 
-            setError(systemErrorMessage)
+            setError(systemErrorMessage)    // Define a mensagem de erro personalizada com base na mensagem de erro recebida.
         }
 
-        setLoading(false)
+        setLoading(false)    // Define `loading` como false, indicando que a operação de criação do usuário foi concluída.
     }
 
     useEffect(()=>{

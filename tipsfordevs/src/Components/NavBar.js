@@ -1,5 +1,9 @@
 import { NavLink } from "react-router-dom"
 
+import { UserAuthentication } from "../hooks/useAuthentication";
+
+import { useAuthValue } from "../context/AuthContext";
+
 import styles from "./NavBar.module.css"
 
 const NavBar=()=>{
@@ -13,12 +17,16 @@ const NavBar=()=>{
             <li>
                 <NavLink to="./">Home</NavLink>
             </li>
-            <li>
+                {!user &&(
+                    <>
+             <li>
                 <NavLink to="./Login">Entrar</NavLink>
             </li>
             <li>
                 <NavLink to="./Register">Cadastrar</NavLink>
             </li>
+                    </>
+                )}
             <li>
                 <NavLink to="./About">Sobre</NavLink>
             </li>

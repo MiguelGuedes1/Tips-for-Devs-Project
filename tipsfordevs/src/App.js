@@ -1,7 +1,18 @@
 
 import './App.css';
 
+
 import {BrowserRouter,Routes,Route,Navigate,Link} from "react-router-dom"
+import { onAuthStateChanged } from 'firebase/auth';
+
+// React Hooks
+
+import { useState,useEffect } from 'react';
+import { UserAuthentication } from './hooks/useAuthentication';
+
+//Contexto
+
+import { AuthProvider } from './context/AuthContext';
 
 // pages
 import Home from "./pages/Home/Home"
@@ -12,9 +23,21 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 
 function App() {
+
+const [user,setUser]=useState(undefined)
+const {auth}=UserAuthentication()
+
+useEffect(()=>{
+  onAuthStateChanged(auth,(user)=>{
+    setUser(user)
+  })
+})
+
+
   return (
     <div className="App">
-      <BrowserRouter>
+      <AuthProvider value={{user}}>
+        <BrowserRouter>
       <NavBar/>
       <div className="container">
         <Routes>
@@ -25,7 +48,8 @@ function App() {
         </Routes>
         </div>
         <Footer/>
-      </BrowserRouter>
+        </BrowserRouter>
+      </AuthProvider>
 
     </div>
 
