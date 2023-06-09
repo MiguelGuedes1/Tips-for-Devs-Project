@@ -10,7 +10,7 @@ const[email,setEmail]=useState("")
 const[password,setPassword]=useState("")
 const[error,setError]=useState("")
 
-const{createUser, error:authError, loading}=UserAuthentication()   // importaçao do hook useAuthentication
+const{login,error:authError, loading}=UserAuthentication()   // importaçao do hook useAuthentication
 
 const handleSubmit = async (e) => {        {/* usada para evitar o comportamento padrão do evento, que geralmente é recarregar a página quando um formulário é enviado. */}
   e.preventDefault()
@@ -23,7 +23,7 @@ const handleSubmit = async (e) => {        {/* usada para evitar o comportamento
     password
   }
 
-  const res=await createUser(user)
+  const res=await login(user)
     console.log(res)
 }  
 
@@ -69,5 +69,13 @@ if(authError){
 }
 
 export default Login
+
+
+
+
+
+
+
+
 
 

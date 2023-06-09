@@ -3,7 +3,7 @@ import {db} from "../firebase/config"
 import {                                              //  Essa seção importa diferentes funções do módulo firebase/auth que serão utilizadas posteriormente no código.
     getAuth,
     createUserWithEmailAndPassword,
-    signWithEmailAndPassword,
+    signInWithEmailAndPassword,
     updateProfile,
     signOut
 } from "firebase/auth"
@@ -99,19 +99,69 @@ export const UserAuthentication=()=>{
 
     }
 
-    useEffect(()=>{
-        return()=>setCancelled(true)
+        // Login
+
+        const login = async (data) => {
+
+            checkIfIsCancelled()
+            setLoading(true)
+            setError(false)
+
+        try {
+            
+            await signInWithEmailAndPassword(auth,data.email,data.password)
+            setLoading(false)
+
+        } catch (error) {
+            
+         let systemErrorMessage
+
+        if(error.message.includes("user-not-found")){
+            systemErrorMessage="Utilizador nao registado"
+        }
+
+        else if(error.message.includes("wrong-password")){
+            systemErrorMessage="Password nao corresponde ao utilizador registado"
+        }
+        else{
+             systemErrorMessage="Ocorreu um erro, por favor tente mais tarde"
+        }
+
+        setError(systemErrorMessage)
+        setLoading(false)
+
+    }
+}
+
+
+
+
+
+    
+    
+    useEffect(() => {
+        return() => setCancelled(true)
     },[])
 
-        return{
+        
+    
+    
+    
+    
+    
+    return{         // Este return é o que a função UserAuthentication vai retornar
             auth,
             createUser,
             error,
             loading,
-            logout
+            logout,
+            login
+  
         }
 
 }
+
+
 
 
 
