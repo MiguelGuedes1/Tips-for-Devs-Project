@@ -18,3 +18,11 @@ const db=getFirestore(app)   // A tua DataBase vai ser o que for passado para o 
 
 export {db}
 
+
+
+
+
+
+
+
+

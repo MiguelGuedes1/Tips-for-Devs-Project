@@ -10,19 +10,7 @@ import {                                              //  Essa seção importa d
 
 import {useState,useEffect} from "react"
 
-
-
-
-
-
-
-
-
-
-
-
-
- // Aqui é definida uma função chamada userAuthentication que será exportada para ser utilizada em outros lugares do código.
+// Aqui é definida uma função chamada userAuthentication que será exportada para ser utilizada em outros lugares do código.
 
 export const UserAuthentication=()=>{                     
     const [error,setError]=useState(null)

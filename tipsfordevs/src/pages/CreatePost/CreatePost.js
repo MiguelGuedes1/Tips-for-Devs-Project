@@ -9,7 +9,10 @@ import { useInsertDocument } from "../../hooks/useInsertDocument"
 
 
 
+
 const CreatePost = () => {
+
+
 
   const[title,setTitle]=useState("")
   const [image,setImage]=useState("")
@@ -97,9 +100,13 @@ const CreatePost = () => {
 
 
        </form>
-    </div>
+
+   </div>
   )
 }
+
+
+
 
 export default CreatePost
 

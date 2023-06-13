@@ -11,8 +11,10 @@ import { useState,useEffect } from 'react';
 import { UserAuthentication } from './hooks/useAuthentication';
 
 //Contexto
-
 import { AuthProvider } from './context/AuthContext';
+
+
+
 
 // pages
 import Home from "./pages/Home/Home"

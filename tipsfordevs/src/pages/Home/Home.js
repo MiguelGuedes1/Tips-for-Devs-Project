@@ -1,33 +1,36 @@
-//CSS
-import styles from "./Home.module.css"
-
-// Hooks
-
-import {useNavigate,Link} from "react-router-dom"
-import { useState } from "react"
-import { useFetchDocuments } from "../../hooks/useFetchDocument"
-import PostDetail from "../../Components/PostDetail"
-
-
+import styles from "./Home.module.css";
+import { useNavigate, Link } from "react-router-dom";
+import { useState } from "react";
+import { useFetchDocuments } from "../../hooks/useFetchDocuments";
+import PostDetail from "../../Components/PostDetail";
 
 const Home = () => {
-const [query,setQuery]=useState("")
-const {documents:posts,loading}=useFetchDocuments("posts")
+  const [query, setQuery] = useState("");
+  const { documents: posts, loading, error } = useFetchDocuments("posts");
 
-const handleSubmit=(e)=>{
-  e.preventDefault()
-}
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
 
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
 
   return (
-         <div>
-         
-              {posts&&posts.map((post)=> <PostDetail key={post.id} post={post}/>)}
-         </div>
-  )
-}
+    <div className={styles.home}>
+      {posts &&
+        posts.map((post) => (
+          <PostDetail key={post.id} post={post} />
+        ))}
+    </div>
+  );
+};
 
-export default Home
+export default Home; 
 
 
 
