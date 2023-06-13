@@ -36,7 +36,25 @@ const [cancelled,setCancelled]=useState(false)
             
             let q
 
-            q = await query(collectionRef,orderBy("createAt","desc"))
+            if(search){
+              q=await query(
+                collectionRef,
+                where("tagsArray","array-contains",search),
+                orderBy("createAt","desc")
+              )}
+
+              else if(uid){
+                q=await query(
+                  collectionRef,
+                  where("uid","==",uid),
+                  orderBy("createAt","desc")
+                )
+              }
+              else {
+                q=await query (collectionRef,orderBy("createAt","desc"))
+              }
+            
+
 
             await onSnapshot(q,(querySnapshot)=>{
                 setDocuments(
