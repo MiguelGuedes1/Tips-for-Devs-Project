@@ -41,7 +41,7 @@ const NavBar=()=>{
                 <NavLink to="./CreatePost">Novo Post</NavLink>
             </li>
             <li>
-                <NavLink to="./Dashboard">Dashboard</NavLink>
+                <NavLink to="./Dashboard">Gerir Posts</NavLink>
             </li>
                     </>
                 )}

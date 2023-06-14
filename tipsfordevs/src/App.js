@@ -25,6 +25,8 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import CreatePost from './pages/CreatePost/CreatePost';
 import Dashboard from './pages/Dashboard/Dashboard';
+import PostDetail from './Components/PostDetail';
+import PostDetailPage from './Components/PostDetailPage';
 
 function App() {
 
@@ -51,6 +53,8 @@ useEffect(()=>{
           <Route path='/Register' element={!user ? <Register/> : <Navigate to = "/" />} ></Route>
           <Route path='/CreatePost' element={user ? <CreatePost/> : <Navigate to = "/Login" />} ></Route>
           <Route path='Dashboard' element={user ? <Dashboard/> : <Navigate to = "/"/>} ></Route>
+          <Route path='/posts/:postId' element={<PostDetailPage />} />
+
 
         </Routes>
         </div>

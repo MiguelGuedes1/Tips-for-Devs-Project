@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { db } from "../firebase/config";
 import { 
     collection,
+    doc,
+    getDoc,
     query,
     orderBy,
     onSnapshot,
@@ -88,8 +90,23 @@ const [cancelled,setCancelled]=useState(false)
 
   return {documents,loading,error}
 
-
 }
+
+
+// Procura de post individual para exibir na PostDetailPage
+
+
+export const getDocumentById = async (docCollection, docId) => {
+  const docRef = doc(db, docCollection, docId);
+  const docSnapshot = await getDoc(docRef);
+  if (docSnapshot.exists()) {
+    return { id: docSnapshot.id, ...docSnapshot.data() };
+  } else {
+    throw new Error('Documento não encontrado');
+  }
+};
+
+
 
 
 
