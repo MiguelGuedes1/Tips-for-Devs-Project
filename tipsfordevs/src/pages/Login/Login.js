@@ -43,7 +43,13 @@ if(authError){
     <div className={styles.login}>
             <div className={styles.backgroundImage}></div>;
          <h1>Entrar</h1>
-       <p>Faça o Login e espalhe o seu conhecimento!</p>
+         
+      <div className={styles.animaçao_container}>
+            <p className={styles.animaçao_quote}>
+              Faça o Login e espalhe o seu conhecimento!
+          </p>
+      </div>
+  
       
        <form onSubmit={handleSubmit}>
      

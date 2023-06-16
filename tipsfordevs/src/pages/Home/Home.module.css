@@ -17,3 +17,30 @@
     justify-content: center;
     align-items: center;
 }
+
+.home h1 {
+    font-size: 4rem;
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        color: white;
+        text-shadow: 0 0 0 white;
+        /* Branco */
+    }
+
+    50% {
+        color: #ffcc00;
+        /* Amarelo (ou qualquer outra cor que você prefira) */
+        text-shadow: 0 0 10px #ffcc00;
+        /* Sombra amarela (ou qualquer outra cor que você preferir) */
+    }
+
+    100% {
+        color: white;
+        text-shadow: 0 0 0 white;
+        /* Branco */
+    }
+}

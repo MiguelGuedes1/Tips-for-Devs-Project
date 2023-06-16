@@ -76,7 +76,13 @@ const CreatePost = () => {
     <div className={styles.criar_post}>
       <div className={styles.backgroundImage}></div>;
        <h2>Criar Post</h2>
-       <p>{` while(alive) { eat() sleep() code() }`}</p>
+
+       <div className={styles.animaçao_container}>
+        <p className={styles.animaçao_quote}>
+          {` while(alive) { eat() sleep() code() }`}
+        </p>
+      </div>
+
 
        <form onSubmit={handleSubmit}>
 

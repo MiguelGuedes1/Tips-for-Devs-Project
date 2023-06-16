@@ -42,7 +42,7 @@ return (
 <div className={styles.backgroundImage}></div>;
        
        <h2>Posts criados por si</h2>
-       <p>Gerencie os seus posts</p>
+       <p className="quotes">Gerencie os seus posts</p>
 
        {posts && posts.length===0 ? (
         <div className={styles.noposts}>

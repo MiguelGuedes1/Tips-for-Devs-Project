@@ -51,13 +51,16 @@ return (
     <div className={styles.register}>
          <div className={styles.backgroundImage}></div>;
        <h1>Registo</h1>
-        <p>
+  
+    <div className={styles.animaçao_container}>
+        <p className={styles.animaçao_quote}>
           {`if(brain!=empty){
             keepCoding()
           } else{
             orderCoffe()
           }`}
         </p>
+    </div>
 
       
        <form onSubmit={handleSubmit}>

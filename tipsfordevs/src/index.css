@@ -92,3 +92,28 @@ textarea {
   border-radius: 5px;
   border-radius: 20px;
 }
+
+.quotes {
+  font-size: 1.0rem;
+  color: #aaa;
+  /* Cor amarela como exemplo */
+  animation: pulse 3s infinite;
+  /* Efeito de pulsação */
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+}

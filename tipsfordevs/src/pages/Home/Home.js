@@ -24,6 +24,7 @@ const Home = () => {
   return (
     <div className={styles.home}>
          <div className={styles.backgroundImage}></div>;
+         <h1>Welcome to my blog</h1>
       {posts &&
         posts.map((post) => (
           <PostDetail key={post.id} post={post} />

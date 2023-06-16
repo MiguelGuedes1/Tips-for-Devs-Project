@@ -42,10 +42,26 @@
     color: #aaa;
 }
 
-.conteudo {
-    padding: 3rem 8rem;
-    color: black;
-    text-align: center;
-    color: wheat;
+/* CreatePost.module.css */
 
+.conteudo {
+    padding: 1.5rem;
+    color: wheat;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(41, 41, 41, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.conteudo:hover {
+    transform: scale(1.02);
 }

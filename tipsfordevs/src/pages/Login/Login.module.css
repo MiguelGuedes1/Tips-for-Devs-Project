@@ -22,3 +22,32 @@
     color: #aaa;
     margin-bottom: 4rem;
 }
+
+.animaçao_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animaçao_quote {
+    font-size: 1.0rem;
+    color: #aaa;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+}
