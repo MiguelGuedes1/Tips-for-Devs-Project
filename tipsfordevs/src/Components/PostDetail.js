@@ -9,11 +9,13 @@ const PostDetail = ({ post }) => {
 
   return (
     <div className={styles.post_detail}>
+      <div className={styles.backgroundImage}></div>;
       <img src={post.image} alt={post.title} />
       <h2>{post.title}</h2>
       <p className={styles.createdby}>Criador: {post.createdBy}</p>
       <p className={styles.conteudo}>{post.body}</p>
     </div>
+    
   );
 };
 

@@ -7,16 +7,95 @@
     align-items: center;
     padding: 0.5rem 2rem;
     font-family: "poppins";
+
 }
+
+a,
+nav button {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    transition: .4s;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: "poppins", sans-serif;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: transparent;
+    transition: transform .4s, background-color .4s;
+    transform: scaleX(0);
+    transform-origin: left center;
+}
+
+a:hover::after {
+    background-color: #bbb;
+    transform: scaleX(1);
+}
+
+nav button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: transparent;
+    transition: transform .4s, background-color .4s;
+    transform: scaleX(0);
+    transform-origin: left center;
+}
+
+nav button:hover::after {
+    background-color: #bbb;
+    transform: scaleX(1);
+}
+
+.ctrl_logo {
+    color: #aaa;
+}
+
+.logo {
+    transition: transform 0.3s ease;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+}
+
+.logo:hover {
+    transform: rotate(360deg) scale(1.2);
+    cursor: pointer;
+}
+
+
 
 .marca {
     font-size: 1.2rem;
+    color: white;
 
 }
+
+.marca:hover {
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
 
 .marca span {
     font-weight: 900;
     text-transform: uppercase;
+    text-decoration: none;
+}
+
+.marca span:hover {
     text-decoration: none;
 }
 

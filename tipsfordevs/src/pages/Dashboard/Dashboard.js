@@ -9,6 +9,7 @@ import { useDeleteDocument } from "../../hooks/useDeleteDocument"
 
 
 
+
 const Dashboard = () => {
 
   const {user}=useAuthValue()
@@ -38,6 +39,7 @@ const handleDelete = (postId) => {
 
 return (
 <div className={styles.dashboard}>
+<div className={styles.backgroundImage}></div>;
        
        <h2>Posts criados por si</h2>
        <p>Gerencie os seus posts</p>
@@ -60,12 +62,12 @@ return (
 
 
                 
-                <button
+                <span
                 onClick={() => handleDelete(post.id)}
                 className="btn"
               >
                 Apagar
-              </button>
+              </span>
             </div>
         </div>
         )}

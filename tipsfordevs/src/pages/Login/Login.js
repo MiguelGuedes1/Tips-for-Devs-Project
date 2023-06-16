@@ -41,6 +41,7 @@ if(authError){
     return(    
     
     <div className={styles.login}>
+            <div className={styles.backgroundImage}></div>;
          <h1>Entrar</h1>
        <p>Faça o Login e espalhe o seu conhecimento!</p>
       

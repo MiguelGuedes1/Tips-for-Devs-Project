@@ -49,6 +49,7 @@ if(authError){
 return (
     
     <div className={styles.register}>
+         <div className={styles.backgroundImage}></div>;
        <h1>Registo</h1>
         <p>
           {`if(brain!=empty){

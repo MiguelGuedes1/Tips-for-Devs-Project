@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useFetchDocuments } from "../../hooks/useFetchDocuments";
 import PostDetail from "../../Components/PostDetail";
 
+
 const Home = () => {
   const [query, setQuery] = useState("");
   const { documents: posts, loading, error } = useFetchDocuments("posts");
@@ -22,6 +23,7 @@ const Home = () => {
 
   return (
     <div className={styles.home}>
+         <div className={styles.backgroundImage}></div>;
       {posts &&
         posts.map((post) => (
           <PostDetail key={post.id} post={post} />

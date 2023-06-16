@@ -1,9 +1,11 @@
 import styles from "./CreatePost.module.css"
 
+
 import{useState} from "react"
 import {useNavigate} from "react-router-dom"
 import {useAuthValue} from "../../context/AuthContext"
 import { useInsertDocument } from "../../hooks/useInsertDocument"
+
 
 
 
@@ -72,6 +74,7 @@ const CreatePost = () => {
 
   return (
     <div className={styles.criar_post}>
+      <div className={styles.backgroundImage}></div>;
        <h2>Criar Post</h2>
        <p>{` while(alive) { eat() sleep() code() }`}</p>
 

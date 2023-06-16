@@ -6,8 +6,10 @@ import {Link} from "react-router-dom"
 
 const About = () => {
     return (
+      
       <div className={styles.about}>
-      <h2>Sobre o Tips for Devs</h2>
+        <div className={styles.backgroundImage}></div>;
+      <h2>Sobre o CTRL + CODE</h2>
       <p>
         Este é um projecto criado com a intençao de receber conhecimento de Devs mais experientes feito com React na parte de Front-End e Firebase no Back-End
       </p>
