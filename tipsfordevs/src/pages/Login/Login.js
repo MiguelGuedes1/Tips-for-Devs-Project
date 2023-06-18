@@ -42,11 +42,11 @@ if(authError){
     
     <div className={styles.login}>
             <div className={styles.backgroundImage}></div>;
-         <h1>Entrar</h1>
+         <h1>Login</h1>
          
       <div className={styles.animaçao_container}>
             <p className={styles.animaçao_quote}>
-              Faça o Login e espalhe o seu conhecimento!
+            Login and spread your knowledge!
           </p>
       </div>
   
@@ -56,16 +56,16 @@ if(authError){
 
           <label>
             <span>Email:</span>
-            <input type="email" name="email" required placeholder="Insira o seu utilizador" value={email} onChange={(e)=>setEmail(e.target.value)} />
+            <input type="email" name="email" required placeholder="Enter your email " value={email} onChange={(e)=>setEmail(e.target.value)} />
           </label>
 
           <label>
             <span>Password:</span>
-            <input type="password" name="password" required placeholder="Insira a sua password" value={password} onChange={(e)=>setPassword(e.target.value)} />
+            <input type="password" name="password" required placeholder="Enter your password" value={password} onChange={(e)=>setPassword(e.target.value)} />
           </label>
 
 
-          <button className="btn">Entrar</button>
+          <button className="btn">Let´s go</button>
           {error && <p className="error">{error}</p>}
 
 

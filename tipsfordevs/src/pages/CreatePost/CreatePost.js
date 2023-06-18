@@ -75,7 +75,7 @@ const CreatePost = () => {
   return (
     <div className={styles.criar_post}>
       <div className={styles.backgroundImage}></div>;
-       <h2>Criar Post</h2>
+       <h2>Create Post</h2>
 
        <div className={styles.animaçao_container}>
         <p className={styles.animaçao_quote}>
@@ -87,21 +87,21 @@ const CreatePost = () => {
        <form onSubmit={handleSubmit}>
 
           <label>
-            <span>Titulo</span>
-            <input type="text" name="title" required placeholder="Insira o titulo da publicação" onChange={(e)=> setTitle(e.target.value)} value={title} />
+            <span>Title</span>
+            <input type="text" name="title" required placeholder="Insert the publication title" onChange={(e)=> setTitle(e.target.value)} value={title} />
           </label>
 
           <label>
-            <span>Url da imagem</span>
-            <input type="text" name="image" placeholder="Se desejar insira uma imagem relacionada com o seu post" onChange={(e)=> setImage(e.target.value)} value={image} />
+            <span>Image url</span>
+            <input type="text" name="image" placeholder="If you wish, insert an image related to your post" onChange={(e)=> setImage(e.target.value)} value={image} />
           </label>
 
           <label>
-            <span>Conteudo do post</span>
-            <textarea name="body" required placeholder="Insira o conteudo do seu post" onChange={(e) => setBody(e.target.value)} value={body} ></textarea>
+            <span>Post content</span>
+            <textarea name="body" required placeholder="Enter your post content" onChange={(e) => setBody(e.target.value)} value={body} ></textarea>
           </label>
 
-         {!response.loading && <button className="btn"> Partilhar Post </button>}
+         {!response.loading && <button className="btn"> Share Post </button>}
 
          {response.error && <p className="error">{response.error}</p>}
          

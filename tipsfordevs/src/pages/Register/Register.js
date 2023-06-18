@@ -50,7 +50,7 @@ return (
     
     <div className={styles.register}>
          <div className={styles.backgroundImage}></div>;
-       <h1>Registo</h1>
+       <h1>Register</h1>
   
     <div className={styles.animaçao_container}>
         <p className={styles.animaçao_quote}>
@@ -65,26 +65,26 @@ return (
       
        <form onSubmit={handleSubmit}>
           <label>
-            <span>Nome:</span>
-            <input type="text" name="displayName" required placeholder="Nome do Utilizador" value={displayName} onChange={(e)=>setDisplayname(e.target.value)}  />
+            <span>Name:</span>
+            <input type="text" name="displayName" required placeholder="Enter your name" value={displayName} onChange={(e)=>setDisplayname(e.target.value)}  />
           </label>
 
           <label>
             <span>Email:</span>
-            <input type="email" name="email" required placeholder="Email do Utilizador" value={email} onChange={(e)=>setEmail(e.target.value)} />
+            <input type="email" name="email" required placeholder="Enter your email" value={email} onChange={(e)=>setEmail(e.target.value)} />
           </label>
 
           <label>
             <span>Password:</span>
-            <input type="password" name="password" required placeholder="Defina a sua password" value={password} onChange={(e)=>setPassword(e.target.value)} />
+            <input type="password" name="password" required placeholder="Define your password" value={password} onChange={(e)=>setPassword(e.target.value)} />
           </label>
 
           <label>
-            <span>Confirmação de password:</span>
-            <input type="password" name="confirmPassword" required placeholder="Confirme a sua password" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)} />
+            <span>Password Confirmation:</span>
+            <input type="password" name="confirmPassword" required placeholder="Confirm your password" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)} />
           </label>
 
-          <button className="btn">Registar</button>
+          <button className="btn">Confirm user</button>
           {error && <p className="error">{error}</p>}
 
 

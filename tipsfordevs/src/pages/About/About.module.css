@@ -12,6 +12,8 @@
 
 
 
+
+
 .about {
     text-align: center;
     display: flex;
@@ -26,11 +28,66 @@
 .about p {
     color: #aaa;
     margin-bottom: 2rem;
-    padding: 2rem 5rem;
+    padding: 2rem 8rem;
 }
 
 .about a {
     display: block;
     margin-top: 15px;
     padding: 10px 15px;
+}
+
+.about_icons {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.botao_share_knowledge {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #333333;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.botao_share_knowledge:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+    z-index: -1;
+}
+
+.botao_share_knowledge:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+.botao_share_knowledge:hover:before {
+    width: 200%;
+    height: 200%;
+}
+
+.botao_share_knowledge:active {
+    background-color: #333333;
+    transform: translateY(0);
+}
+
+.botao_share_knowledge:active:before {
+    width: 100%;
+    height: 100%;
 }

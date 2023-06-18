@@ -13,6 +13,7 @@ const NavBar = () => {
     navigate('/');
   }
 
+
   return (
     <nav className={styles.navbar}>
       <span onClick={clicarLogo} className={styles.logo}>
@@ -22,18 +23,16 @@ const NavBar = () => {
      
 
       <ul className={styles.links_list}>
-        <li>
-          <NavLink to="./">Home</NavLink> {/* Acesso Global */}
-        </li>
+  
 
         {!user && (
           // Acesso para utilizadores NÃO autenticados
           <>
             <li>
-              <NavLink to="./Login">Entrar</NavLink>
+              <NavLink to="./Login">Login</NavLink>
             </li>
             <li>
-              <NavLink to="./Register">Registar</NavLink>
+              <NavLink to="./Register">Register</NavLink>
             </li>
           </>
         )}
@@ -42,16 +41,19 @@ const NavBar = () => {
           // Acesso para utilizadores AUTENTICADOS
           <>
             <li>
-              <NavLink to="./CreatePost">Novo Post</NavLink>
+              <NavLink to="./">Home</NavLink> {/* Acesso Global */}
+           </li>
+            <li>
+              <NavLink to="./CreatePost">Create Post</NavLink>
             </li>
             <li>
-              <NavLink to="./Dashboard">Gerir Posts</NavLink>
+              <NavLink to="./Dashboard">Your posts</NavLink>
             </li>
           </>
         )}
 
         <li>
-          <NavLink to="./About">Sobre</NavLink>
+          <NavLink to="./About">About the Project</NavLink>
         </li>
 
         {user && (

@@ -47,7 +47,11 @@ useEffect(()=>{
       <NavBar/>
       <div className="container">
         <Routes>
-          <Route path='/' element={<Home/>} ></Route>
+            <Route
+                path='/'
+                 element={user ? <Home/> : <Navigate to="/Register" />}
+            ></Route>
+
           <Route path='/About' element={<About/>} ></Route>
           <Route path='/Login' element={!user ? <Login/> : <Navigate to = "/" /> } ></Route>
           <Route path='/Register' element={!user ? <Register/> : <Navigate to = "/" />} ></Route>

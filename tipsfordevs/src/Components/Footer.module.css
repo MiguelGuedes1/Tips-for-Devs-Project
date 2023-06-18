@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 .footer {
-    height: 250px;
+    height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: center;

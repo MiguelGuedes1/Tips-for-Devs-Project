@@ -8,6 +8,7 @@ import PostDetail from "../../Components/PostDetail";
 const Home = () => {
   const [query, setQuery] = useState("");
   const { documents: posts, loading, error } = useFetchDocuments("posts");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,10 +22,21 @@ const Home = () => {
     return <p>Error: {error}</p>;
   }
 
+  const criar_post=()=>{
+    navigate('/CreatePost' );
+  }
+
   return (
     <div className={styles.home}>
          <div className={styles.backgroundImage}></div>;
-         <h1>Welcome to my blog</h1>
+            <div className={styles.titulos}>
+                <h1>Welcome to CTRL + CODE</h1>
+                <h2>knowledge is power, share yours</h2>
+                <button onClick={criar_post} className={styles.botao_share_knowledge}>Share knowledge</button>
+
+      </div>
+      
+
       {posts &&
         posts.map((post) => (
           <PostDetail key={post.id} post={post} />
