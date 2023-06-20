@@ -19,6 +19,7 @@
     margin-bottom: 2rem;
     padding: 3rem 8rem;
     max-width: 100%;
+    text-align: center;
 }
 
 .post_detail img {
@@ -59,9 +60,57 @@
     transition: transform 0.3s ease-in-out;
     width: 90%;
     max-width: 400px;
-    margin: 0 auto;
 }
 
 .conteudo:hover {
     transform: scale(1.02);
+}
+
+
+
+
+/* media queries */
+
+@media screen and (max-width: 870px) {
+    .post_detail img {
+        max-width: 250px;
+        text-align: center;
+        margin-top: 2rem;
+        border-radius: 13px;
+
+    }
+
+    .post_detail h2 {
+        margin-bottom: 0.4rem;
+        color: #aaa;
+        font-size: 1.2rem;
+    }
+
+    .createdby {
+        font-style: italic;
+        color: #444;
+        font-size: 0.6rem;
+        margin-bottom: 1rem;
+        color: #aaa;
+    }
+
+    .conteudo {
+        padding: 1rem 3.8rem;
+        color: wheat;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(41, 41, 41, 0.2);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        transition: transform 0.3s ease-in-out;
+        width: 90%;
+        max-width: 100px;
+        margin: 0 auto;
+        font-size: 0.7rem;
+    }
+
 }

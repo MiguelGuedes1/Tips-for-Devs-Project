@@ -119,3 +119,52 @@ nav button:hover::after {
 
 
 }
+
+/* css para navbar para telemovel e tablet */
+
+.navbar_telemovel_tablet {
+    color: aliceblue;
+    display: none;
+}
+
+@media screen and (max-width: 870px) {
+    .navbar li {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .navbar_telemovel_tablet {
+        color: aliceblue;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.2rem;
+        font-size: 0.9rem;
+    }
+
+    .navbar_telemovel_tablet a {
+        color: #aaa;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+    }
+
+    .navbar_telemovel_tablet p {
+        color: #aaa;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+    }
+
+
+
+}

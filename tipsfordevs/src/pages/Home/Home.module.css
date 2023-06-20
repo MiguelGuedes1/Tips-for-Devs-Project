@@ -31,6 +31,7 @@
     color: white;
     animation: pulse 2s infinite;
     margin-left: 2rem;
+    margin-top: 0.1rem;
 }
 
 @keyframes pulse {
@@ -102,4 +103,70 @@
 .botao_share_knowledge:active {
     background-color: #1a1a1a;
     color: #f5f5f5;
+}
+
+
+
+
+
+
+/* media queries */
+
+@media screen and (max-width: 870px) {
+    .titulos h1 {
+        font-size: 2.6rem;
+    }
+
+    .titulos h2 {
+        font-size: 1.3rem;
+
+    }
+
+    .botao_share_knowledge {
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 1.2rem;
+        color: #333333;
+        background-color: #f5f5f5;
+        border: none;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin-left: 12.5rem;
+        cursor: pointer;
+        margin-top: 3rem;
+    }
+
+
+
+}
+
+@media screen and (max-width: 580px) {
+    .titulos h1 {
+        font-size: 1.4rem;
+    }
+
+    .titulos h2 {
+        font-size: 0.7rem;
+        margin-left: 3.5rem;
+
+    }
+
+    .botao_share_knowledge {
+        display: inline-block;
+        padding: 5px 5px;
+        font-size: 0.9rem;
+        color: #333333;
+        background-color: #f5f5f5;
+        border: none;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin-left: 6.5rem;
+        cursor: pointer;
+        margin-top: 1.6rem;
+    }
+
+
+
 }
