@@ -145,6 +145,8 @@ nav button:hover::after {
         flex-direction: column;
         gap: 0.2rem;
         font-size: 0.9rem;
+
+
     }
 
     .navbar_telemovel_tablet a {
@@ -154,6 +156,8 @@ nav button:hover::after {
         justify-content: center;
         align-items: center;
         font-size: 0.8rem;
+        color: rgb(255, 240, 240);
+
     }
 
     .navbar_telemovel_tablet p {
@@ -163,6 +167,7 @@ nav button:hover::after {
         justify-content: center;
         align-items: center;
         font-size: 0.8rem;
+        color: aliceblue;
     }
 
 

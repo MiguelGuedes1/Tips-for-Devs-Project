@@ -54,3 +54,13 @@
         transform: scale(1);
     }
 }
+
+
+
+@media screen and (max-width: 575px) {
+    .animaçao_quote {
+        font-size: 0.6rem;
+        color: #aaa;
+        animation: pulse 3s infinite;
+    }
+}

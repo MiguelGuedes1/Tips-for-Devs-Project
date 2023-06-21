@@ -91,3 +91,23 @@
     width: 100%;
     height: 100%;
 }
+
+
+
+
+
+@media screen and (max-width: 432px) {
+
+    .about h2 {
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .about p {
+        color: #aaa;
+        margin-bottom: 2rem;
+        padding: 2rem 8rem;
+        font-size: 0.7rem;
+    }
+
+}

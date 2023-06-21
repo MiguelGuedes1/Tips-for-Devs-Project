@@ -47,7 +47,7 @@
 
 .conteudo {
     padding: 1.5rem;
-    color: wheat;
+    color: aliceblue;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -55,7 +55,7 @@
     align-items: center;
     background-color: rgba(41, 41, 41, 0.2);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
     width: 90%;
@@ -72,6 +72,11 @@
 /* media queries */
 
 @media screen and (max-width: 870px) {
+    .post_detail {
+        padding: 3rem 1rem;
+        /* Ajustar o padding para reduzir o espaço nas laterais */
+    }
+
     .post_detail img {
         max-width: 250px;
         text-align: center;
@@ -96,7 +101,7 @@
 
     .conteudo {
         padding: 1rem 3.8rem;
-        color: wheat;
+        color: aliceblue;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -104,13 +109,13 @@
         align-items: center;
         background-color: rgba(41, 41, 41, 0.2);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(5px);
         border-radius: 8px;
         transition: transform 0.3s ease-in-out;
         width: 90%;
-        max-width: 100px;
+        max-width: 150px;
         margin: 0 auto;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
 
 }
