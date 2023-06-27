@@ -1,6 +1,6 @@
 import {db} from "../firebase/config"
 
-import {                                              //  Essa seção importa diferentes funções do módulo firebase/auth que serão utilizadas posteriormente no código.
+import {                                            
     getAuth,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
@@ -10,17 +10,16 @@ import {                                              //  Essa seção importa d
 
 import {useState,useEffect} from "react"
 
-// Aqui é definida uma função chamada userAuthentication que será exportada para ser utilizada em outros lugares do código.
+
 
 export const UserAuthentication=()=>{                     
     const [error,setError]=useState(null)
-    const [loading,setLoading]=useState(null)     // O valor inicial de ambas é null. O hook useState é utilizado para criar essas variáveis de estado e suas respectivas funções para atualização.
+    const [loading,setLoading]=useState(null)     
 
-    // limpeza de restos de funçoes entre componentes
 
     const [cancelled,setCancelled]=useState(false)
 
-    const auth=getAuth()            // A função getAuth() é chamada para obter uma instância do objeto auth que será usada para realizar operações de autenticação com o Firebase.
+    const auth=getAuth()           
 
     function checkIfIsCancelled(){
         if(cancelled){
